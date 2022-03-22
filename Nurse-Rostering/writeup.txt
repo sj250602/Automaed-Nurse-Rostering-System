@@ -1,0 +1,41 @@
+COL 333 ASSIGNMENT 2
+
+REPORT
+
+SOURAV
+2019CS10404
+
+Part1:
+
+In this part, we design an AI programme for an automated nurse rostering system. In this part, we have 
+to deal with the hard constraints that are :
+a.No nurse can cover more than one shift on a single day. 
+b. A nurse should not be allocated to work in two consecutive morning shifts (M).
+c. A nurse cannot work in a morning shift (M) if he/she took the evening shift (E) the preceding day. 
+d. The shift coverage requirements are that there should be exactly (m) nurses in the morning shift, (a) 
+nurses in the afternoon shift and (e) nurses in the evening shift every day. Note that (m + a + e) <= N. 
+e. The hospital must ensure that each nurse gets at least one rest day in a week.
+For constraint a we just do only one value assign to each nurse for b constraint we apply a condition 
+that is check the previous day shift if that was not morning then okay otherwise assign any value other 
+than the Morining shift similarly check for c constraint and for d constrinats we check 3 condition that 
+are the first is if a+m+e>N then print NO solution otherwise check if a+e+m ==N then check the number 
+of days if days are less than 7 then it is okay we go further if days greater then the or equal to 7 then we 
+our contsrint e is not satisfied so for that case print NO solution if any other cazse then we go through it 
+and do the schedult and check that all condition for last constraints we just make a set of nurses which 
+are not taken rest unil 7n,7n+6 days if they are available for rest then give rest to them otherwise if no 
+such case possible then the print NO SOLUTION.
+
+PART 2:
+
+In this part, we design an AI programme for an automated nurse rostering system. In this part, we have 
+to deal with the soft constraints that are :
+a.The senior nurses prefer the morning or the evening shifts over the afternoon shifts as they need to 
+complete paperwork during that time. Their morning, afternoon, evening and rest preference 
+constraints can be assigned weights as 2.0, 1.0, 2.0 and 1.0 respectively. All other constraints in the 
+problem can be considered as of weight 1.0.
+So for doing this part we just first do the case where we follow the hard constraints strictly but also 
+apply some condition for satisfying the hard constraints. The conditions are that if therir is any senior 
+nurse which are eligible for morning and evening shift then give them morning nd evening shift 
+otherwise it’s okay.
+
+Algo used in both part is greedy approach for findng the solution so that we can optimized our code.
